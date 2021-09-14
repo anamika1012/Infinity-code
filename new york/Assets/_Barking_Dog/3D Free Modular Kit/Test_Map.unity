@@ -4813,6 +4813,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1584221441}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &696643451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1671725586712807386, guid: 9fcc49b22e188624da9f9b7e388e2b35,
+    type: 3}
+  m_PrefabInstance: {fileID: 1671725585699870510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &696643452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696643451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf7096ee9cb7f347868d80964304554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMoveSpeed: 120
+  CameraFollowObj: {fileID: 1543672848}
+  clampAngle: 80
+  inputSensitivity: 150
+  CameraObj: {fileID: 0}
+  PlayerObj: {fileID: 0}
+  camDistanceXToPlayer: 0
+  camDistanceYToPlayer: 0
+  camDistanceZToPlayer: 0
+  mouseX: 0
+  mouseY: 0
+  finalInputX: 0
+  finalInputZ: 0
+  smoothX: 0
+  smoothY: 0
 --- !u!4 &703666973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 418090, guid: e4f34474191354a5688752acf8cf95fe,
@@ -10304,28 +10337,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba75f6548b81ad440be3522e8695d23c, type: 3}
---- !u!1 &1401252587 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100090, guid: 4430d50dd64566245a3198d3db5e7bfe,
-    type: 3}
-  m_PrefabInstance: {fileID: 2007755396}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1401252588
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401252587}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1434948825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10767,7 +10778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543672848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 1.07, z: -0.35}
+  m_LocalPosition: {x: -0.09, y: 1.07, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 26817779}
@@ -12027,7 +12038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672354655}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.15, y: 0.83, z: 0.84}
+  m_LocalPosition: {x: 0.15, y: 0.96, z: 1.773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2086686966}
@@ -12093,7 +12104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1672354655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 310236889, guid: 92e9044260e672e48bc43e58f8e9013c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9215277c34f92094684bdc5202a06b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minDistance: 1
@@ -16109,5 +16120,6 @@ PrefabInstance:
       propertyPath: CameraFollowObj
       value: 
       objectReference: {fileID: 1543672848}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1671725586712807387, guid: 9fcc49b22e188624da9f9b7e388e2b35, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fcc49b22e188624da9f9b7e388e2b35, type: 3}
