@@ -3,12 +3,57 @@ guid: d10eb84d5ff504a4db83fc851d60b257
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box002Mat
+    second: {fileID: 2100000, guid: 07847dcff9059b6489b880653ddfa297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder001Mat
+    second: {fileID: 2100000, guid: 571784d6b7e3bd24c8d6e0cfbd3a4886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cylinder002Mat
+    second: {fileID: 2100000, guid: 0d77ebebe86e558459cd64da677b7352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LilyMat
+    second: {fileID: 2100000, guid: fffffeb24d5c4a845af50f303c5f784f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Line001Mat
+    second: {fileID: 2100000, guid: 0355091036425614e99cb767fabb7b42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rectangle001Mat
+    second: {fileID: 2100000, guid: 8e5dc89d5f454654899d5c37575c6aff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rectangle002Mat
+    second: {fileID: 2100000, guid: 183e25baae8a86c4589ae6db72d4f9d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torus_Knot001Mat
+    second: {fileID: 2100000, guid: 4649703c5512ecb4693e2f5dc0f8ac2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torus_Knot002Mat
+    second: {fileID: 2100000, guid: 7d72f87c832fbd74aada112e92e996d7, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
