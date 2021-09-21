@@ -34,9 +34,8 @@ public class SimpleGrabSystem : MonoBehaviour
                 // If no, try to pick item in front of the player
                 // Create ray from center of the screen
                 var ray = characterCamera.ViewportPointToRay(Vector3.one * 0.5f);
-                RaycastHit hit;
                 // Shot ray to find object to pick
-                if (Physics.Raycast(ray, out hit, 1.5f))
+                if (Physics.Raycast(ray, out RaycastHit hit, 1.5f))
                 {
                     // Check if object is pickable
                     var pickable = hit.transform.GetComponent<Thor>();
@@ -91,6 +90,6 @@ public class SimpleGrabSystem : MonoBehaviour
         item.Rb.isKinematic = false;
 
         // Add force to throw item a little bit
-        item.Rb.AddForce(item.transform.forward * 2, ForceMode.VelocityChange);
+        item.Rb.AddForce(item.transform.forward * 3, ForceMode.VelocityChange);
     }
 }
