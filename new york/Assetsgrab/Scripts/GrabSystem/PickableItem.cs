@@ -1,11 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Thor : MonoBehaviour
+/// <summary>
+/// Attach this class to make object pickable.
+/// </summary>
+[RequireComponent(typeof(Rigidbody))]
+public class PickableItem : MonoBehaviour
 {
+    // Reference to the rigidbody
     private Rigidbody rb;
     public Rigidbody Rb => rb;
+
     /// <summary>
     /// Method called on initialization.
     /// </summary>
