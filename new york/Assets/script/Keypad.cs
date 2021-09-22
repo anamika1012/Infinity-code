@@ -44,7 +44,7 @@ public class Keypad : MonoBehaviour
         {
             if (onTrigger)
             {
-                GUI.Box(new Rect(0, 0, 200, 25), "Press 'E' to open keypad");
+                GUI.Box(new Rect(0, 0, 200, 55), "Press 'E' to open keypad");
 
                 if (Keyboard.current[Key.E].wasPressedThisFrame)
                 {
