@@ -56,7 +56,7 @@ public class KeypadController : MonoBehaviour
                 audioSource.PlayOneShot(correctSound);
 
             passwordText.color = Color.green;
-            StartCoroutine(waitAndClear());
+            StartCoroutine(WaitAndClear());
         }
         else
         {
@@ -64,11 +64,11 @@ public class KeypadController : MonoBehaviour
                 audioSource.PlayOneShot(wrongSound);
 
             passwordText.color = Color.red;
-            StartCoroutine(waitAndClear());
+            StartCoroutine(WaitAndClear());
         }
     }
 
-    IEnumerator waitAndClear()
+    IEnumerator WaitAndClear()
     {
         yield return new WaitForSeconds(0.75f);
         Clear();

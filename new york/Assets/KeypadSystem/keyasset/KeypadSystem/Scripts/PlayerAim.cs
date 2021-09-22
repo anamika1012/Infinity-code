@@ -7,8 +7,7 @@ public class PlayerAim : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(headPos.position, headPos.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
+        if (Physics.Raycast(headPos.position, headPos.TransformDirection(Vector3.forward), out RaycastHit hit, Mathf.Infinity))
         {
             Debug.DrawRay(headPos.position, headPos.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
@@ -21,7 +20,7 @@ public class PlayerAim : MonoBehaviour
                     {
                         hit.transform.GetComponent<KeypadKey>().SendKey();
                     }
-                    else if(hit.transform.name=="DoorMesh")
+                    else if (hit.transform.name == "DoorMesh")
                     {
                         hit.transform.GetComponent<DoorController>().OpenClose();
                     }
