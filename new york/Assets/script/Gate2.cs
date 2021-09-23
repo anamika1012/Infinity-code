@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Gate2 : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class Gate2 : MonoBehaviour
 
     [SerializeField]
     private GameObject Door1Img;
+    
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
