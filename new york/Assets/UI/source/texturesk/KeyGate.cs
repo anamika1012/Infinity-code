@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyGate : MonoBehaviour
+    
 {
+    public GameObject key;
     void OnTriggerEnter(Collider collider)
     {
 
-        if (collider.gameObject.name == "Player" && GameVariables.keyCount>0)
+        if (collider.gameObject.name == "Player" && !key.activeSelf)
         {
-            GameVariables.keyCount--;
+          
            
             Destroy(gameObject);
             gameObject.AddComponent<Rigidbody>();
