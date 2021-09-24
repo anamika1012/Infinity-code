@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.InputSystem;
 
+
 public class Keypad : MonoBehaviour
 {
 
@@ -11,6 +12,9 @@ public class Keypad : MonoBehaviour
     public bool doorOpen;
     public bool keypadScreen;
     public Transform doorHinge;
+    private GUIStyle fontSize;
+    public static Color color;
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -22,6 +26,7 @@ public class Keypad : MonoBehaviour
         onTrigger = false;
         keypadScreen = false;
         input = "";
+       
     }
 
     void Update()
@@ -37,6 +42,31 @@ public class Keypad : MonoBehaviour
             doorHinge.rotation = newRot;
         }
     }
+    public void ShowCursor()
+    {
+
+        
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void HideCursor()
+    {
+
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    private void Start()
+    {
+        fontSize = new GUIStyle();
+       
+
+        fontSize.fontSize = 25;
+        
+    }
+
 
     void OnGUI()
     {
@@ -44,8 +74,10 @@ public class Keypad : MonoBehaviour
         {
             if (onTrigger)
             {
-                GUI.Box(new Rect(0, 0, 200, 55), "Press 'E' to open keypad");
 
+                GUI.color = Color.yellow;
+                GUI.Box(new Rect(0, 0, 300, 100), "Press 'E' to open keypad", fontSize);
+              
                 if (Keyboard.current[Key.E].wasPressedThisFrame)
                 {
                     keypadScreen = true;
@@ -55,6 +87,14 @@ public class Keypad : MonoBehaviour
 
             if (keypadScreen)
             {
+                ShowCursor();
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    HideCursor();
+                }
+
+                GUI.skin.box.normal.textColor = Color.cyan;
+                GUI.backgroundColor = Color.cyan;
                 GUI.Box(new Rect(0, 0, 320, 455), "");
                 GUI.Box(new Rect(5, 5, 310, 25), input);
 
@@ -117,5 +157,7 @@ public class Keypad : MonoBehaviour
             }
         }
     }
+
+   
 }
 
