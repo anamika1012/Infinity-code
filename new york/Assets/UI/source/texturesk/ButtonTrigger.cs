@@ -22,17 +22,24 @@ public class ButtonTrigger : MonoBehaviour
             door2img.SetActive(false);
             Debug.Log("You did it!");
             MyAnimationController.SetBool("open", true);
-            key.SetActive(false);
+            StartCoroutine(ExecuteAfterTime());
+         
            
 
         }
         else
             Debug.Log(answer.text);
     }
-   
+
+    IEnumerator ExecuteAfterTime()
+    {
+        yield return new WaitForSeconds(3);
+        key.SetActive(false);
+
+    }
+
+
     
 
-       // if (collider.gameObject.name == "Player")
-        
-    
+
 }
