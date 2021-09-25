@@ -61,12 +61,11 @@ public class Keypad : MonoBehaviour
     private void Start()
     {
         fontSize = new GUIStyle();
-       
-
         fontSize.fontSize = 25;
         
+        
     }
-
+ 
 
     void OnGUI()
     {
@@ -74,8 +73,9 @@ public class Keypad : MonoBehaviour
         {
             if (onTrigger)
             {
-
-                GUI.color = Color.yellow;
+               
+                GUI.backgroundColor = Color.yellow ;
+    
                 GUI.Box(new Rect(0, 0, 300, 100), "Press 'E' to open keypad", fontSize);
               
                 if (Keyboard.current[Key.E].wasPressedThisFrame)
