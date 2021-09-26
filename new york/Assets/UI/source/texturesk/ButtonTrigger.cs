@@ -22,9 +22,9 @@ public class ButtonTrigger : MonoBehaviour
             door2img.SetActive(false);
             Debug.Log("You did it!");
             MyAnimationController.SetBool("open", true);
-            StartCoroutine(ExecuteAfterTime());
-         
-           
+            
+                StartCoroutine(ExecuteAfterTime());
+
 
         }
         else
@@ -35,7 +35,7 @@ public class ButtonTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         key.SetActive(false);
-
+       
     }
 
 

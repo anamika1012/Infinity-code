@@ -12,8 +12,7 @@ public class Keypad : MonoBehaviour
     public bool doorOpen;
     public bool keypadScreen;
     public Transform doorHinge;
-    private GUIStyle fontSize;
-    public static Color color;
+    
 
 
     void OnTriggerEnter(Collider other)
@@ -58,13 +57,7 @@ public class Keypad : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    private void Start()
-    {
-        fontSize = new GUIStyle();
-        fontSize.fontSize = 25;
-        
-        
-    }
+   
  
 
     void OnGUI()
@@ -74,11 +67,17 @@ public class Keypad : MonoBehaviour
             if (onTrigger)
             {
                
-                GUI.backgroundColor = Color.yellow ;
-    
-                GUI.Box(new Rect(0, 0, 300, 100), "Press 'E' to open keypad", fontSize);
-              
+              /*
+                GUIStyle guiStyle = new GUIStyle(GUI.skin.label);
+                guiStyle.normal.textColor = Color.white;
+                guiStyle.fontSize = 36;
+                guiStyle.alignment = TextAnchor.MiddleCenter;
+                Font myFont = (Font)Resources.Load("Fonts/AMERICANCAPTAINWEBFONT", typeof(Font));
+                guiStyle.font = myFont;
+                GUI.Label(new Rect(0, 0, 300, 100), "Press 'E' to open keypad", guiStyle);
                 if (Keyboard.current[Key.E].wasPressedThisFrame)
+              */
+
                 {
                     keypadScreen = true;
                     onTrigger = false;

@@ -6,6 +6,11 @@ public class KeyGate : MonoBehaviour
     
 {
     public GameObject key;
+    public Transform target;
+    public float t;
+
+    public Transform sceptor;
+
     void OnTriggerEnter(Collider collider)
     {
 
@@ -15,6 +20,18 @@ public class KeyGate : MonoBehaviour
            
             Destroy(gameObject);
             gameObject.AddComponent<Rigidbody>();
+           StartCoroutine(ExecuteAfterTime());
         }
+    }
+
+    IEnumerator ExecuteAfterTime()
+    {
+        yield return new WaitForSeconds(4);
+        Vector3 a = sceptor.position;
+        Vector3 b = target.position;
+        sceptor.position = Vector3.Lerp(a, b, t);
+
+
+
     }
 }
