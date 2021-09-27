@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Gate2 : MonoBehaviour
 {
 
-
+    public MouseLook mouseLook;
     [SerializeField]
     private GameObject Door1Img;
     
@@ -15,7 +15,7 @@ public class Gate2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
+            mouseLook.enabled = false;
             ShowCursor();
             if (Input.GetKeyDown(KeyCode.Escape))
             {
