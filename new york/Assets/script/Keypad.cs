@@ -12,7 +12,7 @@ public class Keypad : MonoBehaviour
     public bool doorOpen;
     public bool keypadScreen;
     public Transform doorHinge;
-    
+    public MouseLook mouseLook;
 
 
     void OnTriggerEnter(Collider other)
@@ -33,6 +33,7 @@ public class Keypad : MonoBehaviour
         if (input == curPassword)
         {
             doorOpen = true;
+            mouseLook.enabled = true;
         }
 
         if (doorOpen)
@@ -87,6 +88,7 @@ public class Keypad : MonoBehaviour
             if (keypadScreen)
             {
                 ShowCursor();
+                mouseLook.enabled = false;
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     HideCursor();

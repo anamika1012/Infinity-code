@@ -9,7 +9,7 @@ public class ButtonTrigger : MonoBehaviour
     public string actualAns;
     public GameObject door;
     public GameObject key;
-   
+    public MouseLook mouseLook;
     public GameObject door2img;
     [SerializeField] private Animator MyAnimationController;
 
@@ -20,10 +20,12 @@ public class ButtonTrigger : MonoBehaviour
         {
             door.SetActive(false);
             door2img.SetActive(false);
+            mouseLook.enabled = true;
             Debug.Log("You did it!");
             MyAnimationController.SetBool("open", true);
             
-                StartCoroutine(ExecuteAfterTime());
+
+            StartCoroutine(ExecuteAfterTime());
 
 
         }
