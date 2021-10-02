@@ -11,26 +11,36 @@ public class ButtonTrigger : MonoBehaviour
     public GameObject key;
     public MouseLook mouseLook;
     public GameObject door2img;
+    public AudioSource Correct;
+    public AudioSource Incorrect;
+    public AudioSource Dooropen;
     [SerializeField] private Animator MyAnimationController;
 
    
     public void onSubmit()
     {
-        if(answer.text.ToUpper() == actualAns.ToUpper())
+        if (answer.text.ToUpper() == actualAns.ToUpper())
         {
             door.SetActive(false);
             door2img.SetActive(false);
             mouseLook.enabled = true;
             Debug.Log("You did it!");
-            MyAnimationController.SetBool("open", true);
-            
+            //  MyAnimationController.SetBool("open", true);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Correct.Play();
+            Dooropen.Play();
 
             StartCoroutine(ExecuteAfterTime());
 
 
         }
         else
+        {
+            Incorrect.Play();
+
             Debug.Log(answer.text);
+        }
     }
 
     IEnumerator ExecuteAfterTime()

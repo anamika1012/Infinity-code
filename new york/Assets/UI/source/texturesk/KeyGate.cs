@@ -11,12 +11,14 @@ public class KeyGate : MonoBehaviour
 
     public Transform sceptor;
     public sceptormove sceptorMove;
+    public AudioSource Correct;
+
     void OnTriggerEnter(Collider collider)
     {
 
         if (collider.gameObject.name == "Player" && !key.activeSelf)
         {
-
+            Correct.Play();
             sceptorMove.sceptor();
             Destroy(gameObject);
             

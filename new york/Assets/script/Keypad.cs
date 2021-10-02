@@ -13,7 +13,7 @@ public class Keypad : MonoBehaviour
     public bool keypadScreen;
     public Transform doorHinge;
     public MouseLook mouseLook;
-
+    public AudioSource doorsound;
 
     void OnTriggerEnter(Collider other)
     {
@@ -32,14 +32,18 @@ public class Keypad : MonoBehaviour
     {
         if (input == curPassword)
         {
+            doorsound.Play();
             doorOpen = true;
             mouseLook.enabled = true;
         }
 
         if (doorOpen)
         {
+            
             var newRot = Quaternion.RotateTowards(doorHinge.rotation, Quaternion.Euler(0.0f, -90.0f, 0.0f), Time.deltaTime * 250);
             doorHinge.rotation = newRot;
+            
+
         }
     }
     public void ShowCursor()
