@@ -28,7 +28,7 @@ public class Gate2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
+            mouseLook.enabled = true;
             HideCursor();
         }
     }

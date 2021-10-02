@@ -25,7 +25,9 @@ public class Keypad : MonoBehaviour
         onTrigger = false;
         keypadScreen = false;
         input = "";
-       
+        mouseLook.enabled = true;
+        HideCursor();
+
     }
 
     void Update()
@@ -35,7 +37,9 @@ public class Keypad : MonoBehaviour
             doorsound.Play();
             doorOpen = true;
             mouseLook.enabled = true;
+            HideCursor();
         }
+        
 
         if (doorOpen)
         {
@@ -49,8 +53,8 @@ public class Keypad : MonoBehaviour
     public void ShowCursor()
     {
 
-        
 
+        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -58,7 +62,7 @@ public class Keypad : MonoBehaviour
     public void HideCursor()
     {
 
-
+        
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
